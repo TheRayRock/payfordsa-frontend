@@ -1,0 +1,45 @@
+<h1>Registration Details</h1>
+<form [formGroup]="registrationFormGroup">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+    </div>
+    <div>
+        <label for="rollno">Roll no:</label>
+        <input type="text" id="rollNo" formControlName="rollNo">
+    </div>
+    <div>
+        <label for="branch">branch:</label>
+
+        <select id="branch" formControlName="branch">
+            <option value="cseA">Cse-A</option>
+            <option value="cseB">Cse-B</option>
+            <option value="csd">Csd</option>
+            <option value="csm">Csm</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="civil">Civil</option>
+            <option value="ec">Electronic communication</option>
+        </select>
+    </div>
+    <div>
+        <label for="year">Year:</label>
+        <select id="year" formControlName="year">
+            <option value="B1">B.Tech-1</option>
+            <option value="B2">B.Tech-2</option>
+            <option value="B3">B.Tech-3</option>
+            <option value="B4">B.Tech-4</option>
+            <option value="M1">MBA-1</option>
+            <option value="M2">MBA-2</option>
+        </select>
+    </div>
+    <div><label for="amount">Amount:</label>
+        <input type="number" id="amount" formControlName="amount">
+    </div>
+</form>
+<div>
+    <button (click)="onSubmit()">Submit Form</button>
+</div>
+
+<div>
+    <button (click)="onClear()">clear</button>
+</div>
